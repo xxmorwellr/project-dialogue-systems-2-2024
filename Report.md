@@ -1,6 +1,6 @@
 # Report on Project for Dialogue System 2
 ## Motivation and Background
-In previous coursework, I have realized chit-chatting with LLMs. This time I want to explore the dialogue capacities of LLMs within a landing senario, with a focus on how the model can involve local (custom) knowledge. Since I really enjoy fika time in Sweden, I want to imitate a role-playing dialogue between a barista and a customer.
+In previous coursework, I have realized chit-chatting with LLMs. This time I want to explore the dialogue capacities of LLMs within a landing scenario, with a focus on how the model can involve local (custom) knowledge. Since I really enjoy fika time in Sweden, I want to imitate a role-playing dialogue between a barista and a customer.
 
 
 ## Data Collection  
@@ -8,7 +8,7 @@ I initially wanted to incorporate map api to fetch coffee shop overview and deta
  - API limitation: *Google Maps API* is focusing on location and route planning while *Google Places API* is focusing on nearby searching with specific types (e.g., "bakery", "cafe") or text searching. If you want to fetch detailed menu, you should involve *Yelp Fusion API*.
  - Call Synchronization: It's tricky to ensure that the system calls LLM after data fetching is complete. Considering that this is a lightweight project, it is more efficient to access the data as a local file.  
  
- At last, I collected data by handcraft (`store_menu`) and focused on ordering senario.
+ At last, I collected data by handcraft (`store_menu`) and focused on ordering scenario.
 
 As shown in the slides, I selected the local coffe shop chain *Espresso House* as my landing senario and summarized its SOP by obsersvation. 
 
@@ -19,7 +19,7 @@ I chose *Llama 3.1* as my dialogue model and adjusted parameters like *temperatu
 
 ### Prompt
 I utilized *ChatGPT* to generate specific prompts for me. I divided it into 3 main parts: `Role`, `Persona` and `Objective`. Additonally, I added SOP to let it "understand" the workflow.  
-To emphsize the verbal senario, I also constrained its generative style to avoid markdown syntax and long answers.
+To emphsize the verbal scenario, I also constrained its generative style to avoid markdown syntax and long answers.
 
 ### Run-down Control
 - Hardcoded greeting
@@ -60,7 +60,7 @@ e.g., CO-STAR framework
 ### Advanced methods of incorporating custom knowledge
 - RAG with LangChain framework /GraphRAG with Knowledege Graph(KG)
 - Third-party api like AnythingLLM
-- Agent
+- Fine-tuning with more custom knowledge
 
 ### Multimodal inputs & outputs
 - For landing application, it is better to combine multi-modal outputs, such as social robots like *Furhat*(depends on specific scenarios)
